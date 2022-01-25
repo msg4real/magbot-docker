@@ -20,7 +20,7 @@
 Dockerfile to build an [Errbot](http://errbot.io) (the pluggable chatbot) container image.
 
 Version: `latest`
-Docker: `msg4real/errbot`
+Docker: `msg4real/magbot-core`
 
 # Quick Start
 
@@ -81,7 +81,7 @@ For storage of the application data, you should mount a volume at
 Create the directories for the volume
 
 ```bash
-mkdir /tmp/errbot /tmp/errbot/ssl /tmp/errbot/data /tmp/errbot/plugins /tmp/errbot/backends
+mkdir /tmp/errbot /tmp/errbot/ssl /tmp/errbot/data /tmp/errbot/plugins /tmp/errbot/errbackends
 chmod -R 777 /tmp/errbot
 ```
 
