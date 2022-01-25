@@ -32,7 +32,7 @@ docker run -d \
     -e BOT_ADMINS=admin@xmpp.local \
     -e CHATROOM_PRESENCE=err@conference.xmpp.local \
     -e "TZ=America/Eastern" \
-    msg4real/errbot
+    msg4real/magbot-core
 ```
 
 
@@ -81,7 +81,7 @@ For storage of the application data, you should mount a volume at
 Create the directories for the volume
 
 ```bash
-mkdir /tmp/errbot /tmp/errbot/ssl /tmp/errbot/data /tmp/errbot/plugins
+mkdir /tmp/errbot /tmp/errbot/ssl /tmp/errbot/data /tmp/errbot/plugins /tmp/errbot/backends
 chmod -R 777 /tmp/errbot
 ```
 
@@ -98,19 +98,19 @@ If you pass arguments to Errbot you have to set the `-c /srv/config.py` argument
 ## Alternative config file
 
 ```bash
-docker run -it -v /tmp/errbot:/srv msg4real/errbot -c /srv/production.py
+docker run -it -v /tmp/errbot:/srv msg4real/magbot-core -c /srv/production.py
 ```
 
 ## Err Help
 
 ```bash
-$ docker run msg4real/errbot -h
+$ docker run msg4real/magbot-core -h
 ```
 
 ## Run with text debug backend
 
 ```bash
-docker run -it -v /tmp/errbot:/srv msg4real/errbot -c /srv/config.py -T
+docker run -it -v /tmp/errbot:/srv msg4real/magbot-core -c /srv/config.py -T
 ```
 
 # Exposed Ports
